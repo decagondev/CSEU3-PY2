@@ -1,3 +1,4 @@
+from category import Category
 # Store class (model a shop / store with categories)
 class Store:
     # constructor
@@ -11,14 +12,14 @@ class Store:
         output += self.name + '\n'
         category_number = 1
         for c in self.categories:
-            output += f'  [{category_number}] {c}\n'
+            output += f'  [{category_number}] {c.name}\n'
             category_number += 1
         
         output += f'  [{category_number}] Exit'
         
         return output
 
-s = Store("Harry's Emporium", ['Hats', 'Gloves', 'Pets', 'Bats', 'Carrots'])
+s = Store("Harry's Emporium", [Category('Hats'), Category('Gloves'), Category('Pets'), Category('Bats'), Category('Carrots')])
 print(s)
 
 # set selection to zero
