@@ -7,6 +7,9 @@ class Clothing(Product):
         self.colour = colour
         self.size = size
 
+    def __str__(self):
+        return f'{super().__str__()} Comes in {self.colour}, {str(self.size)}'
+
 # p = Product(...) ==> p -> 34321
 # c = Clothing(...) ==> c -> 12345 super() -> 56343
 
