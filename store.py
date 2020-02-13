@@ -19,7 +19,15 @@ class Store:
         
         return output
 
-s = Store("Harry's Emporium", [Category('Hats'), Category('Gloves'), Category('Pets'), Category('Bats'), Category('Carrots')])
+hats = Category('Hats')
+gloves = Category('Gloves')
+pets = Category('Pets')
+bats = Category('Bats')
+carrots = Category('Carrots')
+
+categories1 = [hats, gloves, pets]
+snowman_categories = [hats, gloves, carrots]
+s = Store("Harry's Emporium", snowman_categories)
 print(s)
 
 # set selection to zero
