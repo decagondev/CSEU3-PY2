@@ -11,4 +11,4 @@ class Equipment(Product):
         self.weight = weight
 
     def __str__(self):
-        pass
+        f'{super().__str__()} Style: {self.style}, Weight: {str(self.weight)}'
