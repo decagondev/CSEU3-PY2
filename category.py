@@ -4,4 +4,12 @@ class Category:
         self.products = products
 
     def __str__(self):
-        return f'No products available in {self.name}'
+        if self.products == None:
+            return f'No products available in {self.name}'
+        else:
+            output = ''
+            output += self.name + '\n'
+            product_number = 1
+            for p in self.products:
+                output += f'  [{product_number}] {p.name}\n'
+                product_number += 1
